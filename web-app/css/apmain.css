@@ -1,0 +1,1039 @@
+/* ------------------------------------------------------------
+Ultima Actualizaci�n: 18 mayo 2012
+Autor: Ang�lica Romero
+------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------
+	Reset para cross-browsing
+------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre,a, abbr, acronym,address, big, cite, code,del, dfn, em, 
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, 
+legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	margin-left: 2em;
+	color: #1C7FC9;
+}
+blockquote, q {
+	quotes: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ------------------------------------------------------------
+	Estilos generales
+------------------------------------------------------------- */
+
+
+body {
+	background: #fff;
+	background-image: url('../images/header.jpg');
+	background-repeat: repeat-x;
+	font: normal 12pt Arial, Helvetica, sans-serif ;
+	color: #333;
+	
+}
+
+ul, li {
+    list-style-type: none;
+}
+a {
+	border: 0;
+	color: #d87f0a;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+a img{
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+a:hover img{
+	opacity:0.7;
+	filter:alpha(opacity=70);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+	font-weight: normal;
+}
+h1{
+	font-size: 21px;
+	font-family: Arial, Helvetica, sans-serif ;
+	color: #333;
+	font-weight:bolder;
+}
+
+h2{
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif ;
+	color: #333;
+	font-weight:bolder;
+	margin-bottom:5px;
+}
+
+h3{
+	font-size: 4em;
+	font-family: Impact;
+	color: #ef570e;
+	margin-left: 390px;
+}
+
+h5{
+	font-size: 1.5em;
+	font-family: Impact;
+	color: #333;
+}
+h4{
+	font-size: 2.2em;
+	font-family: Impact;
+	color: #333;
+	width: 645px;
+}
+h1{
+	margin-bottom: 15px;
+}
+img {
+	vertical-align: middle;
+}
+
+p{
+	line-height: 150%;
+	color: #1C7FC9;
+}
+
+
+label{
+	font-size: 90%;
+}
+label small{
+	font-size: 80%;
+	margin-bottom: 2px;
+}
+/* ------------------------------------------------------------
+	Estilos generales
+------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------
+	Maqueta Principal
+------------------------------------------------------------- */
+
+.wrapper{
+	padding:0px auto 0px auto; 
+	height:auto;
+}
+
+.content
+{
+	height:auto;
+	float:left;
+	
+}
+
+.contenidoContent{
+	margin:0 auto 0 auto;
+	width:1000px;
+	height:auto;
+}
+.contenidoContent .david
+{
+	
+	height:auto;
+}
+.container{
+	width: 970px;
+	padding: 2%;
+	height:1630px;
+}
+
+.treinta{
+    float: left;
+    width: 300px;
+}
+
+.setenta{
+    float: right;
+    margin-top: 17px;
+    width: 650px;
+}
+
+
+.menuprin{
+	width:100%;
+}
+
+.field{
+	width: 100%;
+	float: left;
+	margin: 10px 0;
+}
+
+.back{
+	margin-left: 575px;
+    margin-top: -278px;
+}
+.logo{
+	margin-bottom:20px;
+}
+
+
+h6{
+	font-size: 11px;
+	font-weight: bold;
+	color: #1C7FC9;
+	width: 645px;
+	margin-top:5px;
+}
+
+.header{
+	padding:0px auto 0px auto; 
+}
+
+
+.contenidoHeader{
+	margin:0 auto 0 auto;
+	width:1000px;
+	height:80px;
+}
+
+
+/*
+ MENU
+ */
+
+.headermenu {
+    width: 655px;
+    height: 55px;
+}
+
+.headermenu ul {
+    width: auto;
+    height: 55px;
+    float: left;
+}
+
+.headermenu ul li {
+    width: auto;
+    height: 55px;
+    float: left;
+    display: block;
+}
+
+.headermenu a {
+    margin-left:0px;
+}
+
+.headermenu ul li a {
+    width: 620px;
+    height: 55px;
+    float: left;
+    background: url(../images/menu1.png) no-repeat 0 0;
+    text-indent: -8000000px;
+    display: block;
+}
+
+.headermenu ul li a.usados {
+    width: 65px;
+}
+
+.headermenu ul li a.usados:hover {
+    background-position: 0px -55px;
+}
+
+.headermenu ul li a.nuevos {
+    width: 66px;
+    background-position: -65px -0px;
+}
+
+.headermenu ul li a.nuevos:hover {
+    background-position: -65px -55px;
+}
+
+.headermenu ul li a.guiadeprecio {
+    width: 114px;
+    background-position: -131px 0px;
+}
+
+.headermenu ul li a.guiadeprecio:hover {
+    background-position: -131px -55px;
+}
+
+.headermenu ul li a.noticias {
+    width: 71px;
+    background-position: -245px 0px;
+}
+
+.headermenu ul li a.noticias:hover {
+    background-position: -245px -55px;
+}
+
+.headermenu ul li a.miautoplaza {
+    width: 100px;
+    background-position: -316px 0px;
+}
+
+.headermenu ul li a.miautoplaza:hover {
+    background-position: -316px -55px;
+}
+
+.headermenu ul li a.contactanos {
+    width: 99px;
+    background-position: -416px 0px;
+}
+
+.headermenu ul li a.contactanos:hover {
+    background-position: -416px -55px;
+}
+
+.headermenu ul li a.movil {
+    width: 105px;
+    background-position: -521px 0px;
+}
+
+.headermenu ul li a.movil:hover {
+    background-position: -521px -55px;
+}
+
+/*
+FOOTER
+ */
+
+.footergral{
+	padding:0px auto 0px auto;  
+}
+
+
+
+.contenidoFooter{
+	margin:0 auto 0 auto;
+	padding: 15px;
+    width: 960px;
+	height: 135px;
+}
+
+.footermenu {
+    width: 975px;
+    height: 40px;
+}
+
+.footermenu ul {
+    width: auto;
+    height: 40px;
+    float: left;
+	margin-left:0px;
+}
+
+.footermenu ul li {
+    width: auto;
+    height: 40px;
+    float: left;
+    display: block;
+}
+
+.footermenu a {
+    margin-left:0px;
+}
+
+.footermenu ul li a {
+    width: 975px;
+    height: 40px;
+    float: left;
+    background: url(../images/footer.jpg) no-repeat 0 0;
+    text-indent: -8000000px;
+    display: block;
+}
+
+.footermenu ul li a.preguntas {
+    width: 151px;
+}
+
+.footermenu ul li a.preguntas:hover {
+    background-position: 0px -40px;
+}
+
+.footermenu ul li a.tips {
+    width: 100px;
+    background-position: -140px -0px;
+}
+
+.footermenu ul li a.tips:hover {
+    background-position: -140px -40px;
+}
+
+.footermenu ul li a.tutoriales {
+    width: 64px;
+    background-position: -240px 0px;
+}
+
+.footermenu ul li a.tutoriales:hover {
+    background-position: -240px -40px;
+}
+
+.footermenu ul li a.nada {
+    width: 380px;
+    background-position: -308px 0px;
+}
+
+.footermenu ul li a.nada:hover {
+    background-position: -308px -40px;
+}
+
+.footermenu ul li a.motos {
+    width: 55px;
+    background-position: -688px 0px;
+}
+
+.footermenu ul li a.motos:hover {
+    background-position: -688px -40px;
+}
+
+.footermenu ul li a.accesorios {
+    width: 77px;
+    background-position: -743px 0px;
+}
+
+.footermenu ul li a.accesorios:hover {
+    background-position: -743px -40px;
+}
+
+.footermenu ul li a.inmuebles {
+    width: 80px;
+    background-position: -820px 0px;
+}
+
+.footermenu ul li a.inmuebles:hover {
+    background-position: -820px -40px;
+}
+
+.footermenu ul li a.subastas {
+    width: 68px;
+    background-position: -900px 0px;
+}
+
+.footermenu ul li a.subastas:hover {
+    background-position: -900px -40px;
+}
+
+/*
+FOOTER ABAJO
+*/
+
+.footer1{
+	width:970px;
+	margin-top:10px;	
+}
+
+.a1footer p{
+	color:#333333;
+		
+}
+.b1footer p{
+	color:#333333;
+		
+}
+.c1footer p{
+	color:#333333;
+	width:60px;
+	float:left;
+		
+}
+
+.c1footer img{
+	margin-right:10px;
+		
+}
+.a1footer{
+	width:570px;
+	float:left;
+	font-size:10px;
+}
+
+.b1footer{
+	width:200px;
+	float:left;
+	font-size:10px;
+}
+
+.c1footer{
+	float:right;
+	font-size:10px;
+	width:auto;
+}
+
+.footer2{
+	margin-top:5px;	
+}
+
+.a2footer{
+	width:570px;
+	float:left;
+	font-size:10px;
+	margin-top:15px;
+}
+
+.a2footer p{
+	color:#999797;
+}
+
+.b2footer{
+	float:right;
+	font-size:10px;
+	margin-top: 10px;
+}
+
+.b2footer img{
+	margin-left:20px;		
+}
+
+/*
+CONTENIDO
+*/
+
+.encabezado{
+	margin-bottom:20px;
+	width:970px;
+	float:left;
+}
+.banner1{
+	width:728px;
+	height:94px;
+	border:2px solid #ddd;
+	background-color:#fff;
+	float:left;
+	padding:4px;
+}
+
+
+.interiorbanner1{
+	width:726px;
+	height:94px;
+	background: #ddd;
+}
+.anunciatuauto{
+	width:220px;
+	height:94px;
+	border:2px solid #ddd;
+	background-color:#fff;
+	float:right;
+}
+.anunciatuauto img{
+	margin:6px;
+}
+
+.inicio{
+	margin-bottom:20px;
+	width:970px;
+	float:left;
+}
+
+.buscador{
+	width:645px;
+	height:225px;
+	background:url("../images/buscadorline.jpg") repeat-x scroll center top transparent;
+	float:left;
+}
+
+.buscador img{
+	margin:-2px;
+}
+
+/*
+FORMULARIO
+*/
+
+.datosform{
+	padding-left:15px;
+	padding-top: 3px;
+}
+
+
+
+input, textarea, select{
+	border: 2px solid #666;
+	background: #eee;
+	color: #555;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2px 3px;
+	text-align: center;
+	
+}
+
+
+label{
+	font-size: 15px;
+	margin-right: 10px;
+	color:#fff;
+}
+label small{
+	font-size: 80%;
+	margin-bottom: 2px;
+}
+.field{
+	width: 260px;
+	float: left;
+	margin: 10px 0;
+}
+
+.field2{
+	width: 180px;
+	float: left;
+	margin: 10px 0;
+}
+
+.field2 label {
+	font-size: 12px;
+	margin-right: 10px;
+	color:#fff;
+}
+
+
+/*
+.field2 label{
+	font-size:10px;
+}
+
+*/
+select{
+	width:165px;
+	margin-bottom: 7px;
+}
+
+.fieldsize{
+	width:330px;
+}
+.textofield{
+	width:70px;
+	float:left;
+}
+
+.fieldpequeno select{
+	width:80px;
+}	
+
+/*
+.datosform a{
+	float:right;
+	margin-top:30px;
+}
+
+*/
+/*
+NOTICIAS
+*/
+
+.noticiasbox{
+	width:299px;
+	height:285px;
+	border:2px solid #ddd;
+	background-color:#fff;
+	float:right;
+	padding:6px;
+	margin-bottom:20px;
+}
+
+.interiornoticias{
+	width:272px;
+	height:257px;
+	background: #f4f4f4;
+	padding:14px;
+}
+
+.interiornoticias img{
+	margin-bottom:10px;
+	width: 100%;
+}
+
+.subtitulo{
+	color: #333333;
+    float: left;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.interiornoticias p{
+	font-size:12px;
+	color:#333;
+	margin-top:10px;
+}
+
+.vertodosagen a{
+	float:right;
+}
+
+/*
+cajainterior
+*/
+
+.cajainterior{
+	width:645px;
+	float:left;
+	margin-top:20px;
+}
+
+.seleccion{
+	width:110px;
+	float:left;
+}
+.busquedapor{
+	background-color:#fff;
+	width:110px;
+	float:left;
+	border:2px solid #ddd;
+	margin-bottom:20px;
+}
+
+
+.publicados{
+	width:520px;
+	background-color:#fff;
+	float:right;
+}
+
+
+/*
+JQUERY
+*/
+
+.slidingDiv {
+    height:auto;
+    background-color: #FFFFFF;
+    padding:5px;
+}
+
+.slidingDiv ul{
+	margin-left:5px;
+}
+
+.slidingDiv ul{
+	margin-left:5px;
+}
+ 
+.show_hide {
+    display:none;
+}
+
+.tituloseleccion{
+	background:#e9e7e7;
+	padding:3px;
+	width: 104px;
+	height:20px;
+}
+
+.tituloseleccion a{
+	color:#4f4f4f;
+	margin-left:10px;
+	font-size:13px;
+}
+.tituloseleccion img{
+	float: right;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+
+
+.marcaop{
+	font-size:12px;
+	color:#898181;
+	font-weight:lighter;
+}
+.marcaop:hover{
+	font-size:12px;
+	color:#898181;
+	font-weight:bold;
+}
+
+.vertodas{
+	font-size:12px;
+	color:#606060;
+	font-weight:bold;
+	float:right;
+	padding-right:10px;
+	margin-bottom: 10px;
+}
+.vertodas:hover{
+	font-size:12px;
+	color:#d84915;
+	font-weight:bold;
+	float:right;
+}
+
+.tituloseleccion b{
+	width:50px;
+	margin-left: 8px;
+	float:left;
+	
+}
+
+
+
+/*
+LISTADO
+*/
+
+.listado{
+	width:520px;
+}
+
+.listado1, .listado2, .listado3, .listado4{
+	width:115px;
+	padding:5px;
+	height:160px;
+	float:left;
+	margin-right:3px;
+	margin-bottom:20px;
+}
+
+.listado1{
+	border:1px solid #ddd;
+	height:160px;
+	
+}
+.listado2, .listado3, .listado4{
+	border:1px solid #ddd;
+}
+
+.textolistado{
+	margin-top:10px;
+}
+
+.textolistado p{
+	color:#4f4e4e;
+	font-size:14px;
+	font-weight:bolder;
+}
+
+.datosauto a{
+	color:#d84915;
+	font-size:15px;
+}
+
+.datosauto p{
+	color:#858484;
+	font-size:13px;
+}
+
+
+/*
+BANNERS BOX
+*/
+
+.banner2{
+	width:299px;
+	height:298px;
+	border:2px solid #ddd;
+	background-color:#fff;
+	float:right;
+	padding:6px;
+	margin-bottom:20px;
+}
+
+.interiorbanner2{
+	width:300px;
+	height:285px;
+	background: #ddd;
+}
+
+
+
+/*
+AGENCIAS
+*/
+
+.agencias{
+	width:315px;
+	float:right;
+}
+
+.agenciasygrupos{
+	width:299px;
+	height:110px;
+	border:2px solid #ddd;
+	background-color:#fff;
+	float:right;
+	padding:6px;
+	margin-bottom:20px;
+}
+
+.agenciasbotones{
+	width:300px;
+	height:110px;
+	background: #ffffff;
+	text-align:center;
+}
+
+.agenciasbotones img{
+	margin-right:10px;
+	margin-top:15px;
+}
+
+.vertodasagen{
+	font-size:16px;
+	color:#606060;
+	font-weight:bold;
+	float:right;
+	padding-right:10px;
+	margin-top: 10px;
+}
+.vertodasagen:hover{
+	font-size:16px;
+	color:#d84915;
+	font-weight:bold;
+	float:right;
+}
+
+.menupri{
+	width:auto;
+}
+
+.vertodosvip{
+	width:100%;
+	float:right;
+	margin-top: 2px;
+}
+
+.vertodosvip a{
+	font-size:15px;
+	color:#606060;
+	font-weight:bold;
+	float:right;
+	padding-right:10px;
+	margin-bottom:10px;
+}
+.vertodosvip a:hover{
+	font-size:15px;
+	color:#d84915;
+	font-weight:bold;
+	float:right;
+}
+
+
+/*
+AGENCIAS BUSCADOR
+*/
+
+.agencias2{
+	width:315px;
+	float:right;
+}
+
+.agenciasygrupos2{
+	float: left;
+    height: 155px;
+    padding: 6px;
+    width: 350px;
+	margin-top: 20px;
+}
+
+.agenciasbotones2{
+	width:280px;
+	height:100px;
+	text-align:center;
+	float:left;
+}
+
+.agenciasbotones2 img{
+	margin-right:10px;
+	margin-top:15px;
+}
+
+.vertodasagen2{
+	font-size:16px;
+	color:#fff;
+	font-weight:bold;
+	float:right;
+	padding-right:10px;
+	margin-top: 10px;
+}
+.vertodasagen2:hover{
+	font-size:16px;
+	color:#d84915;
+	font-weight:bold;
+	float:right;
+}
+
+.buscarboton{
+	float:right;
+}
+
+.vertodosvip2{
+	width:100%;
+	float:right;
+	margin-top: 2px;
+	margin-bottom: 15px;
+}
+
+.izq{
+	background: url(../images/izq.png) no-repeat 0 0;
+	width:35px;
+	float:left;
+	margin-top: 15px;
+	height: 45px;
+}
+
+.izq:hover{
+	background: url(../images/izq2.png) no-repeat 0 0;
+	width:35px;
+	float:left;
+	margin-top: 15px;
+	height: 45px;
+}
+.der:hover{
+	background: url(../images/der2.png) no-repeat 0 0;
+	width:35px;
+	float:left;
+	margin-top: 15px;
+	height: 45px;
+}
+
+.der{
+	background: url(../images/der.png) no-repeat 0 0;
+	width:35px;
+	float:left;
+	margin-top: 15px;
+	height: 45px;
+}
+
+h6{
+	color: #666666;
+    margin-bottom: 2px;
+    margin-top: -4px;
+    text-align: center;
+    width: 298px;
+}
+
