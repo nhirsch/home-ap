@@ -1,0 +1,12 @@
+.settings/
+.idea/
+*.iml
+.project
+.classpath
+*~
+*.log
+*.swp
+logs/
+target/
+target-eclipse/
+web-app/WEB-INF/classes
