@@ -1,7 +1,5 @@
 package autoplaza
 
-
-
 import grails.test.mixin.*
 import org.junit.*
 
@@ -11,7 +9,12 @@ import org.junit.*
 @TestFor(ItemNavegador)
 class ItemNavegadorTests {
 
-    void testSomething() {
-       fail "Implement me"
+    void testCreaNavegador() {
+        def NavMarca = new ItemNavegador(
+                nombre: "Volkswagen",
+                cantidad: 1520,
+                url: "http://www.autoplaza.com"
+        )
+        assertEquals 1520, NavMarca.cantidad
     }
 }

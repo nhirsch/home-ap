@@ -187,15 +187,15 @@
                                     <div class="seleccion">
                                         <div class="busquedapor">
                                             <div class="tituloseleccion">
-                                                <a href="#" class="show_hide"><b>${navMarca.nombre}</b><img src="${resource(dir: 'images', file: 'vertodo.png')}"/></a>
+                                                <a href="#" class="show_hide"><b>marca</b><img src="${resource(dir: 'images', file: 'vertodo.png')}"/></a>
                                             </div>
                                             <div class="slidingDiv">
                                                 <ul type="none">
-                                                   <%for (int y = 0; y<navMarca.items.size(); y++){ %>
+                                                   
                                                     <li>
-                                                        <a href="${navMarca.items[y].link}" class="marcaop">${navMarca.items[y].itemNombre}</a>
+                                                        <a href="" class="marcaop">marca</a>
                                                     </li> 
-                                                   <%} %> 
+                                                   
                                                     
                                                     <br/>
                                                     <li>
@@ -210,11 +210,11 @@
                                             </div>
                                             <div class="slidingDiv">
                                                 <ul type="none">
-                                                    <%for (int y = 0; y<navPrecio.items.size(); y++){ %>
+                                                   
                                                     <li>
-                                                        <a href="${navPrecio.items[y].link}" class="marcaop">${navPrecio.items[y].itemNombre}</a>
+                                                        <a href="" class="marcaop">precio</a>
                                                     </li> 
-                                                   <%} %> 
+                                                    
                                                     <br/>
                                                     <li>
                                                         <a href="http://www.autoplaza.com.mx/" class="vertodas">&#187; Ver todos</a>
@@ -228,11 +228,11 @@
                                             </div>
                                             <div class="slidingDiv">
                                                 <ul type="none">
-                                                    <%for (int y = 0; y<navEstado.items.size(); y++){ %>
+                                                    
                                                     <li>
-                                                        <a href="${navEstado.items[y].link}" class="marcaop">${navEstado.items[y].itemNombre}</a>
+                                                        <a href="" class="marcaop">estado</a>
                                                     </li> 
-                                                   <%} %> 
+                                                    
                                                     
                                                     <br/>
                                                     <li>
@@ -248,11 +248,11 @@
                                             <div class="slidingDiv">
                                                 <ul type="none">
                                                     
-                                                   <%for (int y = 0; y<navAnio.items.size(); y++){ %>
+                                                   
                                                     <li>
-                                                        <a href="${navAnio.items[y].link}" class="marcaop">${navAnio.items[y].itemNombre}</a>
+                                                        <a href="" class="marcaop">anio</a>
                                                     </li> 
-                                                   <%} %> 
+                                                    
                                                     <br/>
                                                     <li>
                                                         <a href="http://www.autoplaza.com.mx/" class="vertodas">&#187; Ver todos</a>
@@ -263,37 +263,7 @@
                                     </div>
                                     <div class="publicados">
                                         <h1>Anuncios VIP más recientes</h1>
-                                       	<% int k=0%>
-                                        <% for (int j=0 ; j<Listado.Anuncios.size(); j++) { %>
-                                        <% if ((j)%4 == 0){  %>
-					<%  k=0%>
-										
-											<div class="listado">
-										<% } %>
-											
-											<div class="listado${k+1}">
-                                                <a href="http://www.autoplaza.com.mx/">
-                                              
-                                                <img src="${Listado.Anuncios[j].imagen}"/></a>
-                                                <div class="textolistado">
-                                                    <p>
-                                                        ${Listado.Anuncios[j].marca} ${Listado.Anuncios[j].modelo} ${Listado.Anuncios[j].anio}
-                                                    </p>
-                                                    <div class="datosauto">
-                                                        <a href="http://www.autoplaza.com.mx/">$  ${Listado.Anuncios[j].precio}M.N</a>
-                                                        <p>
-                                                             ${Listado.Anuncios[j].Estado}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-										
-										<% if ((j)%4 == 0){ %>
-											</div>
-										<% } %>
-<% k= k + 1%>
-                                        
-										<% } %>
+                                       	
         								
                                         <div class="vertodosvip">
                                             <a href="http://www.autoplaza.com.mx/" class="vertodas">&#187; Ver todos los anuncios VIP</a>

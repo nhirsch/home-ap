@@ -2,10 +2,12 @@ package autoplaza
 
 class ItemNavegador {
 
-    String link
-	String itemNombre
+    
+	String nombre
 	int cantidad
+	String url
+	
+	
 	static constraints = {
     }
-	
 }
