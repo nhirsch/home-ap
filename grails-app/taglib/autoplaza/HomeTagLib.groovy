@@ -45,6 +45,46 @@ class HomeTagLib {
 		
 	}
 	
+	def listadoVIP = { atr, body ->
+		
+		out << "<div class='publicados'>"
+		out << "	<h1>Anuncios VIP más recientes</h1>"
+			int renglon = 0
+			for(int index=0; index<atr.Anuncios.size(); index++ )
+			{
+				if ((index)%4 == 0){ 
+					renglon = 0
+					out << "<div class='listado'>"
+				}
+				
+				out << "<div class='listado${renglon+1}'>"
+				out << "	<a href='http://www.autoplaza.com.mx/'><img src='${atr.Anuncios[index].urlFotoPrincipal}'/></a>"
+				out << "	<div class='textolistado'>"
+				out << "		<p>${atr.Anuncios[index].marca} ${atr.Anuncios[index].modelo} ${atr.Anuncios[index].anio}</p>"
+				out << "		<div class='datosauto'>"
+				out << "			<a href='http://www.autoplaza.com.mx/'>${atr.Anuncios[index].precio}M.N</a>"
+				out << "			<p>${atr.Anuncios[index].Estado}</p>"
+				out << "		</div>"
+				out << "	</div>"
+				out << "</div>"
+				
+				if ((index)%4 == 0){ 
+					out << "</div>"
+				 }
+				renglon =  renglon + 1
+				
+				
+				
+			}
+		out <<	"<div class='vertodosvip'>"
+		out <<	"<a href='http://www.autoplaza.com.mx/' class='vertodas'>&#187; Ver todos los anuncios VIP</a>"
+		out <<  "</div>"
+		out << "</div>"
+
+	
+	}
+	
+	
 	def footer = { atr, body ->
 		
 		out << "<div class='footergral'>"

@@ -4,61 +4,79 @@ package autoplaza
 import groovyx.net.http.HTTPBuilder
 import static groovyx.net.http.Method.GET
 import static groovyx.net.http.ContentType.TEXT
+import static groovyx.net.http.ContentType.JSON
+import groovyx.net.http.RESTClient
+import groovyx.net.http.AsyncHTTPBuilder
 
 class APDataService {
 
 	boolean transactional = true
-	String queryProcesado
-	String resultado = "No tenemos resultados"
+	def queryProcesado
+	String api
+	String urlApi = "http://api.autoplaza.com.mx"
+	int status
+	def resultado 
+	
+	static constraints = {
+		
+		
+	}
 
 	def conectar  =
 	{
-		String url = "http://iphone.autoplaza.com.mx/fastSearch/fastSearchIphone.aspx?"+queryProcesado
-				
-				def http = new HTTPBuilder(url)
-				
-					 http.request( GET, TEXT ) { req ->
-				
-						 // executed for all successful responses:
-						 response.success = { resp, reader ->
-							 //render "my response handler!"
-							 assert resp.statusLine.statusCode == 200
-							 resultado =  reader.text // print response stream
-				   
-						 }
-				  
-						 // executed only if the response status code is 401:
-						 response.'404' = { resp ->
-							 //render  "not found!"
-							 resultado = "No tenemos resultados"
-						 }
-					 }
+
+		def http = new HTTPBuilder()
 		
+			 
+				http.request( urlApi, GET, JSON ) {
+				 uri.path = api
+				 uri.query = queryProcesado
+				 
+				 	response.success = { resp, json ->
+						 	status = 200  // respondio bien la conexion
+							resultado = json 
+						  }
+				   
+				}
+	  
 		
 	}
 	def procesarQuery(query)
 	{
+		resultado = ""
+		status = 400  // inicializamos la api
 			switch ( query ) {
-				case "home":
-					queryProcesado = "HP=yes"
+				case "homeAP":
+					api ="/api/anuncios"
+					queryProcesado = [q:"test"]
 					conectar()
 					break
 					// lets fall through
-		
+				case "homeMELI":
+					urlApi = "https://api.mercadolibre.com"
+					api ="/sites/MLM/search"
+					queryProcesado = [category:"MLM1744", seller_id:"71922862"]
+					conectar()
+					break
+					// lets fall through
 				case "navmarca":
-					queryProcesado = "isnavigator=yes&navigatorname=marca&query="
+					api ="/api/Navegador"
+					queryProcesado = [isNavigator:"yes", NavigatorName:"marca", query:"content;a*"]
 					conectar()
 					break
 				case "navyear":
-					queryProcesado = "isnavigator=yes&navigatorname=year&query="
+					api ="/api/Navegador"
+					queryProcesado = [isNavigator:"yes", NavigatorName:"year", query:"content;a*"]
 					conectar()
 					break
 				case "navestado":
-					queryProcesado = "isnavigator=yes&navigatorname=estado&query="
+					api ="/api/Navegador"
+					queryProcesado = [isNavigator:"yes", NavigatorName:"estado", query:"content;a*"]
 					conectar()
 					break
 				case "navprecio":
-					queryProcesado = "isnavigator=yes&navigatorname=rankprecio&query="
+					api ="/api/Navegador"
+					queryProcesado = [isNavigator:"yes", NavigatorName:"rankprecio", query:"content;a*"]
 					conectar()
 					break
 				default:
