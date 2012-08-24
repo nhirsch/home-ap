@@ -45,6 +45,7 @@ class APDataService {
 	{
 		resultado = ""
 		status = 400  // inicializamos la api
+		urlApi = "http://api.autoplaza.com.mx"
 			switch ( query ) {
 				case "homeAP":
 					api ="/api/anuncios"
@@ -61,22 +62,22 @@ class APDataService {
 					// lets fall through
 				case "navmarca":
 					api ="/api/Navegador"
-					queryProcesado = [isNavigator:"yes", NavigatorName:"marca", query:"content;a*"]
+					queryProcesado = [isNavigator:"yes", NavigatorName:"marca", query:"content;a*", orderby:""]
 					conectar()
 					break
 				case "navyear":
 					api ="/api/Navegador"
-					queryProcesado = [isNavigator:"yes", NavigatorName:"year", query:"content;a*"]
+					queryProcesado = [isNavigator:"yes", NavigatorName:"year", query:"content;a*", orderby:""]
 					conectar()
 					break
 				case "navestado":
 					api ="/api/Navegador"
-					queryProcesado = [isNavigator:"yes", NavigatorName:"estado", query:"content;a*"]
+					queryProcesado = [isNavigator:"yes", NavigatorName:"estado", query:"content;a*", orderby:""]
 					conectar()
 					break
 				case "navprecio":
 					api ="/api/Navegador"
-					queryProcesado = [isNavigator:"yes", NavigatorName:"rankprecio", query:"content;a*"]
+					queryProcesado = [isNavigator:"yes", NavigatorName:"rankprecio", query:"content;a*", orderby:""]
 					conectar()
 					break
 				default:

@@ -12,11 +12,16 @@ import groovyx.net.http.AsyncHTTPBuilder
 class HomeController {
 	
 	def Anuncios = []
+	def NavMarca = []
+	def NavPrecio = []
+	def NavEstado = []
+	def NavYear = []
 	
     def index() {
 			
 			listadovip()  // generamos el listado VIP
-			["Anuncios":Anuncios]
+			menus()
+			["Anuncios":Anuncios, "NavMarca":NavMarca, "NavPrecio":NavPrecio, "NavEstado":NavEstado, "NavYear":NavYear]
 		 }
 	
 	
@@ -57,7 +62,80 @@ class HomeController {
 	// metodo para generar los menus (navegadores: marca, precio, estado y año) para la seccion de la home
 	def menus()
 	{
-	
+		def APServicio = new APDataService()
+		def Dat		
+		//navegador marca
+		Dat= APServicio.procesarQuery("navmarca")
+		if (APServicio.status == 200) // si la conexion tuvo exito
+		{			 
+			Dat.Resultado.each {
+
+				  navMarca.add(
+					  new  ItemNavegador(
+						  nombre : it.ItemName,
+						  cantidad : it.val,
+						  navegador: "Marca",
+						  url: "http://www.autos-usados.autoplaza.com.mx/Autos/${it.ItemName}-marca.aspx?query=&isfql=false&filtros="
+						  
+						  )
+					  )
+			  }
+		}
+		//navegador precio
+		Dat= APServicio.procesarQuery("navprecio")
+		if (APServicio.status == 200) // si la conexion tuvo exito
+		{
+			  Dat.Resultado.each {
+				 
+				  navPrecio.add(
+					   new  ItemNavegador(
+						  nombre : it.ItemName,
+						  cantidad : it.val,
+						  navegador:"Precio",
+						  url: "http://www.autos-usados.autoplaza.com.mx/Autos/${it.ItemName.replaceAll(' ','-')}-rankprecio.aspx?query=&isfql=false&filtros="
+						  
+						  )
+					  )
+			  }
+				  
+		} // end if
+		
+		//navegador estado
+		Dat= APServicio.procesarQuery("navestado")
+		if (APServicio.status == 200) // si la conexion tuvo exito
+		{
+			  Dat.Resultado.each {
+				  navEstado.add(
+					   new  ItemNavegador(
+						  nombre : it.ItemName,
+						  cantidad : it.val,
+						  navegador: "Estado",
+						  url: "http://www.autos-usados.autoplaza.com.mx/Autos/${it.ItemName.replaceAll(' ','-')}-estado.aspx?query=&isfql=false&filtros="
+						  
+						  )
+					  )
+				  
+			  }
+				  
+		} // end if
+		
+		//navegador anio
+		Dat= APServicio.procesarQuery("navyear")
+		if (APServicio.status == 200) // si la conexion tuvo exito
+		{
+			  Dat.Resultado.each {
+				  navYear.add(
+					   new  ItemNavegador(
+						  nombre : it.ItemName,
+						  cantidad : it.val,
+						  navegador : "Año",
+						  url: "http://www.autos-usados.autoplaza.com.mx/Autos/${it.ItemName}-year.aspx?query=&isfql=false&filtros="
+						  
+						  )
+					  )
+			  }
+				  
+		} // end if
 
 	}	
 	

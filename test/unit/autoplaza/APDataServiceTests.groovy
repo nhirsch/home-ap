@@ -11,18 +11,29 @@ import org.junit.*
 @TestFor(APDataService)
 class APDataServiceTests {
 
+	void testSomething() {
+	
+	}
    
  /* Test para consultar información de los listados de anuncios vip desde la la api de autoplaza*/
+	
  void getDataAP()
  {
 	
-	 def APServicio = new APDataService()
+	 def APServicio = new APDataService(
+		 queryProcesado:"",
+		 api:"",
+		 urlApi:"http://api.autoplaza.com.mx",
+		 status:400,
+		 resultado:""
+		 )
 	 def Dat = APServicio.procesarQuery("homeAP")
-	 assertEquals 200, APServicio.status  // si la conexion tuvo exito
+	 assertEquals "http://api.autoplaza.com.mx", APServicio.urlApi  // si la conexion tuvo exito
 
  }
  
  /* Test para consultar información de los listados de anuncios vip desde la la api de MELI */
+ 
  void getDataMELI()
  {
 	  def APServicio = new APDataService()
@@ -30,7 +41,9 @@ class APDataServiceTests {
 	 assertEquals 200, APServicio.status  // si la conexion tuvo exito
  }
  
+ 
  /* Test para consultar información del menu de marca desde la la api de autoplaza */
+ 
  void getDataNavMarca()
  {
 	  def APServicio = new APDataService()

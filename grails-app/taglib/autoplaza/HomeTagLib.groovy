@@ -57,6 +57,7 @@ class HomeTagLib {
 					out << "<div class='listado'>"
 				}
 				
+				
 				out << "<div class='listado${renglon+1}'>"
 				out << "	<a href='http://www.autoplaza.com.mx/'><img src='${atr.Anuncios[index].urlFotoPrincipal}'/></a>"
 				out << "	<div class='textolistado'>"
@@ -67,6 +68,7 @@ class HomeTagLib {
 				out << "		</div>"
 				out << "	</div>"
 				out << "</div>"
+				
 				
 				if ((index)%4 == 0){ 
 					out << "</div>"
@@ -82,6 +84,30 @@ class HomeTagLib {
 		out << "</div>"
 
 	
+	}
+	
+	def menu = { atr, body ->
+		
+		out << "<div class='busquedapor'>"
+		out << "<div class='tituloseleccion'>"
+		out <<	"<a href='#' class='show_hide'><b>${atr.Nombre}</b><img src='${resource(dir: 'images', file: 'vertodo.png')}'/></a>"
+		out << "</div>"
+		out << "<div class='slidingDiv'>"
+		out <<	"<ul type='none'>"
+				for (int index = 0; index < atr.maxItems.toInteger(); index++){ 
+		out <<	"	<li>"
+		out <<	"		<a href='${atr.Menu[index].url}' class='marcaop'>${atr.Menu[index].nombre}</a>"
+		out <<	"	</li>"
+			   } 
+				
+		out <<	"	<br/>"
+		out <<	"	<li>"
+		out <<	"		<a href='http://www.autoplaza.com.mx/' class='vertodas'>&#187; Ver todas</a>"
+		out <<	"	</li>"
+		out <<	"</ul>"
+		out << "</div>"
+		out << "</div>"
+		
 	}
 	
 	

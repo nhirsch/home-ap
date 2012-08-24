@@ -29,9 +29,7 @@
     <body>
         <ap:header name="header"  />
         <div class="wrapper">
-     				cuerpo de documento
      				<g:layoutBody />
-     				
         </div>
   		<ap:footer name="footer" />
     </body>
