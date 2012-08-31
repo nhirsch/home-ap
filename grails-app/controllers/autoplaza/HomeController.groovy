@@ -151,8 +151,8 @@ class HomeController {
 	def publicidad()
 	{
 		
-		S_Script = new S_BannerScriptService()
-		S_Script.Gen_ScriptPBanner()
+		//S_Script = new S_BannerScriptService()
+		//S_Script.Gen_ScriptPBanner()
 							
 	}																																																																	
 		

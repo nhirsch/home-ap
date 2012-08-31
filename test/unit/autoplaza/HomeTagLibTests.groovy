@@ -14,4 +14,10 @@ class HomeTagLibTests {
     void testSomething() {
         
     }
+
+    void testHeader() {
+        def template = '<ap:header />'
+        def content = applyTemplate(template)
+        assertTrue(content.contains("<a href='#' class='nuevos'>Nuevos</a>"))
+    }
 }
