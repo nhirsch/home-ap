@@ -1,17 +1,20 @@
 
+<ap:bannerLayer name="bannerLayer" />
+ ${BannersScript.Codigo}
 <div class="contenidoContent">
 	<div class="david">
 		<div class="container">
 			<div class="content">
 				<div class="encabezado">
 					<div class="banner1">
-						<div class="interiorbanner1"></div>
+						<div class="interiorbanner1"><ap:bannerMega name="bannerMega" /></div>
 					</div>
 					<div class="anunciatuauto">
 						<a href="http://www.autoplaza.com.mx/"><img src="${resource(dir: 'images', file: 'anuncia.jpg')}"/></a>
 					</div>
-				</div>
+				</div> 
 				<div class="inicio">
+				 
 					<div class="buscador">
                     	tag lib del buscador
 					</div>
@@ -37,7 +40,9 @@
 					</div>
 					<div class="banner2">
 						<h6>PUBLICIDAD</h6>
-						<div class="interiorbanner2"></div>
+						<div class="interiorbanner2">
+							    <ap:bannerBox name="bannerBox" />
+						</div>
 					</div>
 					<div class="agencias"><h2>Grupos recomendados</h2></div>
                     <div class="agenciasygrupos">
@@ -53,7 +58,7 @@
 					</div>
 					<div class="banner2">
 						<h6>PUBLICIDAD</h6>
-						<div class="interiorbanner2"></div>
+						<div class="interiorbanner2"><ap:bannerBox2 name="bannerBox2" /></div>
 					</div>
 				</div>
 			</div>

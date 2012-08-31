@@ -59,7 +59,7 @@ class HomeTagLib {
 				
 				
 				out << "<div class='listado${renglon+1}'>"
-				out << "	<a href='http://www.autoplaza.com.mx/'><img src='${atr.Anuncios[index].urlFotoPrincipal}'/></a>"
+				out << "	<a href='http://www.autos-usados.autoplaza.com.mx/Autos/${atr.Anuncios[index].marca}-${atr.Anuncios[index].modelo}-${atr.Anuncios[index].anio}~id${atr.Anuncios[index].identificador}.aspx'><img src='${atr.Anuncios[index].urlFotoPrincipal}'/></a>"
 				out << "	<div class='textolistado'>"
 				out << "		<p>${atr.Anuncios[index].marca} ${atr.Anuncios[index].modelo} ${atr.Anuncios[index].anio}</p>"
 				out << "		<div class='datosauto'>"
@@ -177,5 +177,21 @@ class HomeTagLib {
 		out << "	</div>"
 		out << "</div>"
 		out << "</div>"
+	}
+	
+	def bannerBox= { atr, body ->
+		out << "<script type='text/javascript'>eplAD4M('au_home_box');</script>"
+	}
+	def bannerBox2= { atr, body ->
+		out << "<script type='text/javascript'>eplAD4M('au_home_box2');</script>"
+	}
+	def bannerSky= { atr, body ->
+		out << "<script type='text/javascript'>eplAD4M('au_home_sky');</script>"
+	}
+	def bannerLayer= { atr, body ->
+		out << "<script type='text/javascript'>eplAD4M('au_home_layer');</script>"
+	}
+	def bannerMega= { atr, body ->
+		out << "<script type='text/javascript'>eplAD4M('au_home_mega');</script>"
 	}
 }

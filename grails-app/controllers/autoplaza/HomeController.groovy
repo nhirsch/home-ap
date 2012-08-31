@@ -16,22 +16,30 @@ class HomeController {
 	def NavPrecio = []
 	def NavEstado = []
 	def NavYear = []
+	def S_Script
 	
-    def index() {
+    def index(String q) {
 			
-			listadovip()  // generamos el listado VIP
+			
+		    if (q == "" || q == null)
+			{
+				q = "homeAP"
+			}
+		    listadovip(q)  // generamos el listado VIP
 			menus()
-			["Anuncios":Anuncios, "NavMarca":NavMarca, "NavPrecio":NavPrecio, "NavEstado":NavEstado, "NavYear":NavYear]
+			publicidad()
+			["Anuncios":Anuncios, "NavMarca":NavMarca, "NavPrecio":NavPrecio, "NavEstado":NavEstado,
+				 "NavYear":NavYear, "BannersScript":S_Script]
 		 }
 	
 	
 	// metodo para generar el listado de los anuncios VIP para la seccion de la home
-	def listadovip()
+	def listadovip(String query)
 	{
 		
 		Anuncios.clear
 		def APServicio = new APDataService()
-		def Dat = APServicio.procesarQuery("homeAP")
+		def Dat = APServicio.procesarQuery(query)
 		
 		if (APServicio.status == 200) // si la conexion tuvo exito
 		{
@@ -143,6 +151,9 @@ class HomeController {
 	def publicidad()
 	{
 		
+		S_Script = new S_BannerScriptService()
+		S_Script.Gen_ScriptPBanner()
+							
 	}																																																																	
 		
 	
