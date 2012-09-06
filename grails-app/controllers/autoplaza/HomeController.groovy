@@ -48,14 +48,13 @@ class HomeController {
 
 				anuncios.add(
 					new  Anuncio(
-						identificador : it.id,
 						tipoMoneda : it.currency_id,
 						marca: it.attributes.value_name[1],
 						modelo:it.attributes.value_name[2],
 						urlFotoPrincipal:it.thumbnail,
 						anio:it.attributes.value_name[4],
 						precio:it.price,
-						Estado:it.address.state_name
+						estado:it.address.state_name
 					)
 				)
 			}

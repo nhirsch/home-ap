@@ -49,7 +49,7 @@ class DetalleAnuncioController {
 						  modelo:atributos[2],
 						  kilometraje:atributos[0],
 						  urlFotoPrincipal:Dat.thumbnail,
-						  version_sub:atributos[3],
+						  versionSub:atributos[3],
 						  anio:atributos[4],
 						  precio:Dat.price,
 						  contacto: seller,

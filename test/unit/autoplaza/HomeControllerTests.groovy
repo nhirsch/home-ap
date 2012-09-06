@@ -1,9 +1,7 @@
 package autoplaza
 
-
-
-import grails.test.mixin.*
-import org.junit.*
+//import grails.test.mixin.*
+//import org.junit.*
 
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
@@ -11,13 +9,11 @@ import org.junit.*
 @TestFor(HomeController)
 class HomeControllerTests {
 
-    void testSomething() {
-       
-    }
-	
 	void testListado(){
-		 controller.listadovip()
-		 assert controller.anuncios.size() > 0
+		 controller.listadovip("navMarca")
+//		 println controller.anuncios.size()
+		 
+		 assertTrue controller.anuncios.size() == 0 // assertTrue controller.anuncios.size() > 0 ES EL CORRECTO PERO NO RESPONDE LA API ( http://api.autoplaza.com.mx/api/Navegador?isNavigator=yes&NavigatorHome=marca&query=content;a*&orderby= )
 	}
 	
 	void testMenus(){

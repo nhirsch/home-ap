@@ -2,14 +2,13 @@ package autoplaza
 
 class Anuncio {
 
-	static belongsTo = [contacto:Contacto]
-	
-	String identificador
+	int id
+	String uid	//String unique identifier
 	String marca
 	String modelo
 	int anio
 	String urlFotoPrincipal
-	String Estado
+	String estado
 	double precio
 	String tipoMoneda
 	
@@ -17,21 +16,21 @@ class Anuncio {
 	double kilometraje
 	String descripcion
 	String equipamiento
-	String version_sub
+	String versionSub
 	String colorExterior
 	String colorInterior
 	String tipoVestidura
 	String tipoTransmision
-	
-	
+
 	static constraints = {
-		
-		identificador(blank:false)
+//		uid(blank:false, unique:true)
 		marca(blank:false)
 		modelo(blank:false)
 		anio(blank:false)
 		precio(blank:false)
 		
     }
-	
+
+	static belongsTo = [contacto:Contacto]
+
 }
