@@ -21,13 +21,13 @@ class APDataServiceTests {
  {
 	
 	 def APServicio = new APDataService(
-		 queryProcesado:"",
-		 api:"",
+		 queryParams:"",
+		 relativePath:"",
 		 urlApi:"http://api.autoplaza.com.mx",
 		 status:400,
-		 resultado:""
+		 result:""
 		 )
-	 def Dat = APServicio.procesarQuery("homeAP")
+	 def Dat = APServicio.getSection("homeAP")
 	 assertEquals "http://api.autoplaza.com.mx", APServicio.urlApi  // si la conexion tuvo exito
 
  }
@@ -37,7 +37,7 @@ class APDataServiceTests {
  void getDataMELI()
  {
 	  def APServicio = new APDataService()
-	 def Dat = APServicio.procesarQuery("homeMELI")
+	 def Dat = APServicio.getSection("homeMELI")
 	 assertEquals 200, APServicio.status  // si la conexion tuvo exito
  }
  
@@ -47,7 +47,7 @@ class APDataServiceTests {
  void getDataNavMarca()
  {
 	  def APServicio = new APDataService()
-	 def Dat = APServicio.procesarQuery("navmarca")
+	 def Dat = APServicio.getSection("navmarca")
 	 assertEquals 200, APServicio.status  // si la conexion tuvo exito
  }
  

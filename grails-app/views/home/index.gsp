@@ -1,6 +1,6 @@
 
 <ap:bannerLayer name="bannerLayer" />
- ${BannersScript.Codigo}
+<%-- ${BannersScript.Codigo} --%>
 <div class="contenidoContent">
 	<div class="david">
 		<div class="container">

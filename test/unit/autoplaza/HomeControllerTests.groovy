@@ -17,12 +17,12 @@ class HomeControllerTests {
 	
 	void testListado(){
 		 controller.listadovip()
-		 assert controller.Anuncios.size() > 0
+		 assert controller.anuncios.size() > 0
 	}
 	
 	void testMenus(){
 		controller.menus()
-		assert controller.NavMarca[0].navegador == "Marca"
+		assert controller.marcas[0].navegador == "Marca"
 		assert controller.NavEstado[0].navegador == "Estado"
 		assert controller.NavPrecio[0].navegador == "Precio"
 		assert controller.NavYear[0].navegador == "Año"

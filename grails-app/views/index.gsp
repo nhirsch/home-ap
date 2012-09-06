@@ -1,135 +1,122 @@
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>
-			
-        </title>
-        <link href="${resource(dir: 'css', file: 'apmain.css')}" media="all" rel="stylesheet" type="text/css"/>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript">
-        </script>
-        <script type="text/javascript">
+	<head>
+		<meta name="layout" content="main"/>
+		<title>Welcome to Grails</title>
+		<style type="text/css" media="screen">
+			#status {
+				background-color: #eee;
+				border: .2em solid #fff;
+				margin: 2em 2em 1em;
+				padding: 1em;
+				width: 12em;
+				float: left;
+				-moz-box-shadow: 0px 0px 1.25em #ccc;
+				-webkit-box-shadow: 0px 0px 1.25em #ccc;
+				box-shadow: 0px 0px 1.25em #ccc;
+				-moz-border-radius: 0.6em;
+				-webkit-border-radius: 0.6em;
+				border-radius: 0.6em;
+			}
+
+			.ie6 #status {
+				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
+			}
+
+			#status ul {
+				font-size: 0.9em;
+				list-style-type: none;
+				margin-bottom: 0.6em;
+				padding: 0;
+			}
             
-            $(document).ready(function(){
-            
-                $(".slidingDiv").show();
-                $(".show_hide").show();
-                
-                $('.show_hide').click(function(){
-                    $(".slidingDiv").slideToggle();
-                });
-                
-            });
-        </script>
-        
-    </head>
-    <body>
-        <div class="header">
-            <div class="contenidoHeader">
-                <div id="menuprin">
-                    <div class="treinta">
-                        <a href="http://www.autoplaza.com.mx/"><img src="${resource(dir: 'images', file: 'logo.png')}"/></a>
-                    </div>
-                    <div class="setenta">
-                        <div class="headermenu">
-                            <ul>
-                                <li>
-                                    <a href="#" class="usados">Usados</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nuevos">Nuevos</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="guiadeprecio">Guía de precio</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="noticias">Noticias</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="miautoplaza">Mi Autoplaza</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="contactanos">Cont�ctanos</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="movil">Móvil</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-     				cuerpo de documento
-     				
-     				
-        </div>
-        <div class="footergral">
-            <div class="contenidoFooter">
-                <div class="footermenu">
-                    <ul>
-                        <li>
-                            <a href="http://www.autoplaza.com.mx/" class="preguntas">Preguntas Frecuentes</a>
-                        </li>
-                        <li>
-                            <a href="http://www.autoplaza.com.mx/" class="tips">Preguntas Frecuentes</a>
-                        </li>
-                        <li>
-                            <a href="http://www.autoplaza.com.mx/" class="tutoriales">Preguntas Frecuentes</a>
-                        </li>
-                        <li>
-                            <a class="nada"></a>
-                        </li>
-                        <li>
-                            <a href="http://www.autoplaza.com.mx/" class="motos">Preguntas Frecuentes</a>
-                        </li>
-                        <li>
-                            <a href="http://www.autoplaza.com.mx/" class="accesorios">Preguntas Frecuentes</a>
-                        </li>
-                        <li>
-                            <a href="http://www.autoplaza.com.mx/" class="inmuebles">Preguntas Frecuentes</a>
-                        </li>
-                        <li>
-                            <a href="http://www.autoplaza.com.mx/" class="subastas">Preguntas Frecuentes</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer1">
-                    <div class="a1footer">
-                        <p>
-                            Juan Salvador Agraz No. 50 Piso 3, Col. Santa Fe. Deleg. Cuajimalpa de Morelos.C.P. 05300. Ciudad de México 
-                        </p>
-                    </div>
-                    <div class="b1footer">
-                        <p>
-                            <b>Tel : (01 55) 4424 2000</b>
-                            | con 100 Lineas
-                        </p>
-                    </div>
-                    <div class="c1footer">
-                        <p>
-                            Síguenos
-                        </p>
-                        <a href="http://www.autoplaza.com.mx/"><img src="${resource(dir: 'images', file: 'facebook.png')}"/></a><a href="http://www.autoplaza.com.mx/"><img src="${resource(dir: 'images', file: 'twitter.png')}"/></a>
-                    </div>
-                </div>
-                <div class="footer2">
-                    <div class="a2footer">
-                        <p>
-                            Autoplaza es solo un medio de contacto entre vendedor y comprador, La información publicada en Autoplaza es proporcionada por cada vendedor, la información de características y precios es responsabilidad delcliente. Siempre existe el riesgo de que la información cambie entre el tiempo que usted la recibe y la usa.
-                        </p>
-                    </div>
-                    <div class="b2footer">
-                        <a href="http://www.autoplaza.com.mx/">
-<img src="${resource(dir: 'images', file: 'iab.jpg')}"/></a><a href="http://www.autoplaza.com.mx/">
-<img src="${resource(dir: 'images', file: 'comscore.jpg')}"/></a><a href="http://www.autoplaza.com.mx/">
-<img src="${resource(dir: 'images', file: 'amipci.jpg')}"/></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+			#status li {
+				line-height: 1.3;
+			}
+
+			#status h1 {
+				text-transform: uppercase;
+				font-size: 1.1em;
+				margin: 0 0 0.3em;
+			}
+
+			#page-body {
+				margin: 2em 1em 1.25em 18em;
+			}
+
+			h2 {
+				margin-top: 1em;
+				margin-bottom: 0.3em;
+				font-size: 1em;
+			}
+
+			p {
+				line-height: 1.5;
+				margin: 0.25em 0;
+			}
+
+			#controller-list ul {
+				list-style-position: inside;
+			}
+
+			#controller-list li {
+				line-height: 1.3;
+				list-style-position: inside;
+				margin: 0.25em 0;
+			}
+
+			@media screen and (max-width: 480px) {
+				#status {
+					display: none;
+				}
+
+				#page-body {
+					margin: 0 1em 1em;
+				}
+
+				#page-body h1 {
+					margin-top: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div id="status" role="complementary">
+			<h1>Application Status</h1>
+			<ul>
+				<li>App version: <g:meta name="app.version"/></li>
+				<li>Grails version: <g:meta name="app.grails.version"/></li>
+				<li>Groovy version: ${org.codehaus.groovy.runtime.InvokerHelper.getVersion()}</li>
+				<li>JVM version: ${System.getProperty('java.version')}</li>
+				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
+				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
+				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
+				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
+				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
+			</ul>
+			<h1>Installed Plugins</h1>
+			<ul>
+				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
+					<li>${plugin.name} - ${plugin.version}</li>
+				</g:each>
+			</ul>
+		</div>
+		<div id="page-body" role="main">
+			<h1>Welcome to Grails</h1>
+			<p>Congratulations, you have successfully started your first Grails application! At the moment
+			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
+			   content you may choose. Below is a list of controllers that are currently deployed in this application,
+			   click on each to execute its default action:</p>
+
+			<div id="controller-list" role="navigation">
+				<h2>Available Controllers:</h2>
+				<ul>
+					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+					</g:each>
+				</ul>
+			</div>
+		</div>
+	</body>
 </html>

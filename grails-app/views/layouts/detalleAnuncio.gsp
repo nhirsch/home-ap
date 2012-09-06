@@ -27,7 +27,7 @@
         
     </head>
     <body>
-        <ap:header name="header"  /> 
+        <ap:header name="header"  />
         <div class="wrapper">
      				<g:layoutBody />
         </div>
