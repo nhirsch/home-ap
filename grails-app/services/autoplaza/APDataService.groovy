@@ -13,7 +13,7 @@ class APDataService {
 	int status
 	def result
 
-	def requestData  =
+	def requestData =
 	{
 		def http = new HTTPBuilder(baseurlAPI)
 
@@ -83,4 +83,24 @@ class APDataService {
 
 		return result
 	}
+	
+	/*
+	 * TODO: Revisar y refactorizar
+	 */
+	/*
+	def procesarQueryDetalle(identificador, tipo)
+	{
+		resultado = ""
+		status = 400  // inicializamos la api
+		urlApi = "http://api.autoplaza.com.mx"
+		if (tipo == "MELI")
+		{
+			urlApi = "https://api.mercadolibre.com"
+			api ="/items/${identificador}"
+		}
+		
+		conectar()
+				
+		return resultado
+	}*/
 }
